@@ -1,0 +1,351 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  line-height: 1.2;
+}
+
+section.experience {
+  height: 100%;
+  width: 100%;
+  padding: 40px 30px;
+  transition: 0.5s all;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+section.experience .inner-content {
+  transition: 0.5s all;
+}
+section.experience h1 {
+  text-align: center;
+  color: #113100;
+  font-weight: 600;
+  margin: auto;
+  margin-bottom: 50px;
+  transition: 0.5s all;
+  max-width: 300px;
+}
+section.experience .face {
+  position: relative;
+  height: 250px;
+  width: 240px;
+  margin: auto;
+  pointer-events: none;
+  transition: 0.5s all;
+  margin-top: 0;
+}
+section.experience .face .left-eye,
+section.experience .face .right-eye {
+  background-color: var(--accent-color);
+  width: 110px;
+  position: absolute;
+  transition: 0.5s all;
+}
+section.experience .face .left-eye {
+  top: 0;
+  left: 0;
+}
+section.experience .face .right-eye {
+  top: 0;
+  right: 0;
+}
+section.experience .face .mouth {
+  fill: transparent;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  transition: 0.5s all;
+}
+section.experience .face .mouth path {
+  stroke: var(--accent-color);
+  stroke-width: 15px;
+  stroke-linecap: round;
+}
+section.experience .state {
+  height: 50px;
+  position: relative;
+  width: 250px;
+  margin: auto;
+  overflow: hidden;
+  margin-top: -40px;
+  margin-bottom: 50px;
+}
+section.experience .state h2 {
+  transition: 0.5s all;
+  position: absolute;
+  font-size: 50px;
+  text-align: center;
+  width: 100%;
+  font-weight: 900;
+  opacity: 0.3;
+}
+section.experience .slider {
+  width: 250px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+section.experience .slider .label {
+  position: absolute;
+  bottom: -35px;
+  opacity: 0.5;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+section.experience .slider .label span:nth-child(2) {
+  transform: translateX(8px);
+}
+section.experience .slider:before {
+  border-radius: 25px;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 10px;
+  top: 7px;
+  background-color: var(--slider-color);
+  transition: 0.5s all;
+}
+section.experience .slider .point {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: var(--slider-color);
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s all;
+}
+section.experience .slider .indicator {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  right: 0;
+  top: -5px;
+  border-radius: 100%;
+  transition: 0.5s all;
+}
+section.experience .slider .indicator:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  transform: translateY(-4px);
+  border-bottom: 2px solid var(--bg-color);
+  transition: 0.5s all;
+}
+section.experience .note-form {
+  margin: auto;
+  max-width: 300px;
+  margin-top: 80px;
+  position: relative;
+  height: 50px;
+  transition: 0.5s all;
+}
+section.experience .note-form:before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  top: 0;
+  border-radius: 50px;
+  transition: 0.5s all;
+  border: 2px solid transparent;
+}
+section.experience .note-form .box {
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: none;
+  background: transparent;
+  resize: none;
+  transition: 0.5s all;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding-right: 115px;
+}
+section.experience .note-form .box::-moz-placeholder {
+  transform: translateY(7px);
+  color: black;
+}
+section.experience .note-form .box::placeholder {
+  transform: translateY(7px);
+  color: black;
+}
+section.experience .note-form .button {
+  padding: 15px 20px;
+  border-radius: 50px;
+  background-color: var(--accent-color);
+  color: white;
+  font-weight: 500;
+  z-index: 1;
+  transition: 0.5s all;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+section.experience.form-open .face {
+  margin-top: -80px;
+}
+section.experience.form-open .inner-content {
+  transform: translateX(-300px);
+  opacity: 0;
+}
+section.experience.form-open h1 {
+  transform: translateY(-200px);
+}
+section.experience.form-open .note-form {
+  transform: translateY(-200px);
+  height: 150px;
+}
+section.experience.form-open .note-form .box {
+  padding-bottom: 65px;
+  padding-right: 20px;
+}
+section.experience.form-open .note-form .box::-moz-placeholder {
+  transform: none;
+}
+section.experience.form-open .note-form .box::placeholder {
+  transform: none;
+}
+section.experience.form-open .note-form:before {
+  border-radius: 20px;
+  border-color: var(--accent-color);
+}
+section.experience.form-open .note-form .button {
+  bottom: 10px;
+  right: 10px;
+}
+section.experience.notbad {
+  --bg-color: #dea43d;
+  --accent-color: #431f00;
+  --slider-color: #cc942c;
+}
+section.experience.notbad .state .good {
+  left: 250px;
+}
+section.experience.notbad .state .bad {
+  left: -250px;
+}
+section.experience.notbad .state .notbad {
+  left: 0;
+}
+section.experience.notbad .slider .indicator {
+  right: calc(50% - 17.5px);
+  transform: rotate(-180deg);
+}
+section.experience.notbad .face {
+  transform: translateY(50px);
+}
+section.experience.notbad .face .left-eye,
+section.experience.notbad .face .right-eye {
+  width: 100px;
+  height: 40px;
+  border-radius: 100px;
+}
+section.experience.notbad .face .left-eye {
+  left: 10px;
+}
+section.experience.notbad .face .right-eye {
+  right: 10px;
+}
+section.experience.notbad .face .mouth {
+  transform: rotate(-180deg);
+  bottom: 10px;
+}
+section.experience.good {
+  --bg-color: #aabe4a;
+  --accent-color: #103000;
+  --slider-color: #90a62d;
+}
+section.experience.good .state .good {
+  left: 0;
+}
+section.experience.good .state .bad {
+  left: -500px;
+}
+section.experience.good .state .notbad {
+  left: -250px;
+}
+section.experience.good .face .left-eye,
+section.experience.good .face .right-eye {
+  height: 110px;
+  border-radius: 100%;
+}
+section.experience.bad {
+  --bg-color: #fc795a;
+  --accent-color: #760901;
+  --slider-color: #ec6142;
+}
+section.experience.bad .state .good {
+  left: 500px;
+}
+section.experience.bad .state .bad {
+  left: 0;
+}
+section.experience.bad .state .notbad {
+  left: 250px;
+}
+section.experience.bad .slider .indicator {
+  right: calc(100% - 35px);
+  transform: rotate(-180deg);
+}
+section.experience.bad .face {
+  transform: translateY(50px);
+}
+section.experience.bad .face .left-eye,
+section.experience.bad .face .right-eye {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+section.experience.bad .face .left-eye {
+  left: 40px;
+  transform: rotate(-70deg);
+}
+section.experience.bad .face .right-eye {
+  right: 40px;
+  transform: rotate(70deg);
+}
+section.experience.bad .face .mouth {
+  transform: rotate(-180deg);
+  bottom: 10px;
+}
+section.experience .copy {
+  text-decoration: none;
+  font-size: 12px;
+  color: black;
+  opacity: 0.6;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  width: -moz-max-content;
+  width: max-content;
+  display: block;
+}

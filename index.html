@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, maximum-scale=1.0, user-scalable=no, initial-scale=1.0">
+        <title>Shopping Experience - by Gabriel Silva</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <section class="experience good">
+            <h1>How was your shopping experience?</h1>
+
+            <div class="face">
+                <div class="left-eye"></div>
+                <div class="right-eye"></div>
+                <svg class="mouth" width="256" height="256" viewBox="0 0 256 256">
+                    <path d="M100,160 Q130,186 156,160"></path>
+                </svg>
+            </div>
+
+            <div class="inner-content">
+                <div class="state">
+                    <h2 class="bad">BAD</h2>
+                    <h2 class="notbad">NOT BAD</h2>
+                    <h2 class="good">GOOD</h2>
+                </div>
+
+                <div class="slider">
+                    <div class="indicator"></div>
+                    <div class="point" id="btnBad"></div>
+                    <div class="point" id="btnNotBad"></div>
+                    <div class="point" id="btnGood"></div>
+                    <div class="label">
+                        <span>Bad</span>
+                        <span>Not Bad</span>
+                        <span>Good</span>
+                    </div>
+                </div>
+            </div>
+
+            <form id="form" class="note-form">
+                <textarea class="box" placeholder="Add note"></textarea>
+                <button class="button">Submit -></button>
+            </form>
+
+            <a href="https://github.com/eugabrielsilva" target="_blank" class="copy">made by @eugabrielsilva</a>
+        </section>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>

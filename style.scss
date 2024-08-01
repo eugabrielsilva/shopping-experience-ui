@@ -1,0 +1,409 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    line-height: 1.2;
+}
+
+section.experience {
+    height: 100%;
+    width: 100%;
+    padding: 40px 30px;
+    transition: 0.5s all;
+    background-color: var(--bg-color);
+    overflow: hidden;
+
+    .inner-content {
+        transition: 0.5s all;
+    }
+
+    h1 {
+        text-align: center;
+        color: #113100;
+        font-weight: 600;
+        margin: auto;
+        margin-bottom: 50px;
+        transition: 0.5s all;
+        max-width: 300px;
+    }
+
+    .face {
+        position: relative;
+        height: 250px;
+        width: 240px;
+        margin: auto;
+        pointer-events: none;
+        transition: 0.5s all;
+        margin-top: 0;
+
+        .left-eye,
+        .right-eye {
+            background-color: var(--accent-color);
+            width: 110px;
+            position: absolute;
+            transition: 0.5s all;
+        }
+
+        .left-eye {
+            top: 0;
+            left: 0;
+        }
+
+        .right-eye {
+            top: 0;
+            right: 0;
+        }
+
+        .mouth {
+            fill: transparent;
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            transition: 0.5s all;
+
+            path {
+                stroke: var(--accent-color);
+                stroke-width: 15px;
+                stroke-linecap: round;
+            }
+        }
+    }
+
+    .state {
+        height: 50px;
+        position: relative;
+        width: 250px;
+        margin: auto;
+        overflow: hidden;
+        margin-top: -40px;
+        margin-bottom: 50px;
+
+        h2 {
+            transition: 0.5s all;
+            position: absolute;
+            font-size: 50px;
+            text-align: center;
+            width: 100%;
+            font-weight: 900;
+            opacity: 0.3;
+        }
+    }
+
+    .slider {
+        width: 250px;
+        margin: auto;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        .label {
+            position: absolute;
+            bottom: -35px;
+            opacity: 0.5;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            span:nth-child(2) {
+                transform: translateX(8px);
+            }
+        }
+
+        &:before {
+            border-radius: 25px;
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 10px;
+            top: 7px;
+            background-color: var(--slider-color);
+            transition: 0.5s all;
+        }
+
+        .point {
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+            background-color: var(--slider-color);
+            cursor: pointer;
+            position: relative;
+            transition: 0.5s all;
+        }
+
+        .indicator {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            background-color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            right: 0;
+            top: -5px;
+            border-radius: 100%;
+            transition: 0.5s all;
+
+            &:before {
+                content: '';
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;
+                transform: translateY(-4px);
+                border-bottom: 2px solid var(--bg-color);
+                transition: 0.5s all;
+            }
+        }
+    }
+
+    .note-form {
+        margin: auto;
+        max-width: 300px;
+        margin-top: 80px;
+        position: relative;
+        height: 50px;
+        transition: 0.5s all;
+
+        &:before {
+            content: '';
+            background-color: rgba(255, 255, 255, 0.2);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            right: 0;
+            top: 0;
+            border-radius: 50px;
+            transition: 0.5s all;
+            border: 2px solid transparent;
+        }
+
+        .box {
+            padding: 10px 20px;
+            position: relative;
+            z-index: 1;
+            appearance: none;
+            outline: none;
+            border: none;
+            background: transparent;
+            resize: none;
+            transition: 0.5s all;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            padding-right: 115px;
+
+            &::placeholder {
+                transform: translateY(7px);
+                color: black;
+            }
+        }
+
+        .button {
+            padding: 15px 20px;
+            border-radius: 50px;
+            background-color: var(--accent-color);
+            color: white;
+            font-weight: 500;
+            z-index: 1;
+            transition: 0.5s all;
+            appearance: none;
+            border: none;
+            outline: none;
+            height: 50px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            cursor: pointer;
+        }
+    }
+
+    &.form-open {
+        .face {
+            margin-top: -80px;
+        }
+
+        .inner-content {
+            transform: translateX(-300px);
+            opacity: 0;
+        }
+
+        h1 {
+            transform: translateY(-200px);
+        }
+
+        .note-form {
+            transform: translateY(-200px);
+            height: 150px;
+
+            .box {
+                padding-bottom: 65px;
+                padding-right: 20px;
+
+                &::placeholder {
+                    transform: none;
+                }
+            }
+
+            &:before {
+                border-radius: 20px;
+                border-color: var(--accent-color);
+            }
+
+            .button {
+                bottom: 10px;
+                right: 10px;
+            }
+        }
+    }
+
+    &.notbad {
+        --bg-color: #dea43d;
+        --accent-color: #431f00;
+        --slider-color: #cc942c;
+
+        .state {
+            .good {
+                left: 250px;
+            }
+
+            .bad {
+                left: -250px;
+            }
+
+            .notbad {
+                left: 0;
+            }
+        }
+
+        .slider {
+            .indicator {
+                right: calc(50% - 17.5px);
+                transform: rotate(-180deg);
+            }
+        }
+
+        .face {
+            transform: translateY(50px);
+
+            .left-eye,
+            .right-eye {
+                width: 100px;
+                height: 40px;
+                border-radius: 100px;
+            }
+
+            .left-eye {
+                left: 10px;
+            }
+
+            .right-eye {
+                right: 10px;
+            }
+
+            .mouth {
+                transform: rotate(-180deg);
+                bottom: 10px;
+            }
+        }
+    }
+
+    &.good {
+        --bg-color: #aabe4a;
+        --accent-color: #103000;
+        --slider-color: #90a62d;
+
+        .state {
+            .good {
+                left: 0;
+            }
+
+            .bad {
+                left: -500px;
+            }
+
+            .notbad {
+                left: -250px;
+            }
+        }
+
+        .face {
+            .left-eye,
+            .right-eye {
+                height: 110px;
+                border-radius: 100%;
+            }
+        }
+    }
+
+    &.bad {
+        --bg-color: #fc795a;
+        --accent-color: #760901;
+        --slider-color: #ec6142;
+
+        .state {
+            .good {
+                left: 500px;
+            }
+
+            .bad {
+                left: 0;
+            }
+
+            .notbad {
+                left: 250px;
+            }
+        }
+
+        .slider {
+            .indicator {
+                right: calc(100% - 35px);
+                transform: rotate(-180deg);
+            }
+        }
+
+        .face {
+            transform: translateY(50px);
+
+            .left-eye,
+            .right-eye {
+                width: 60px;
+                height: 60px;
+                border-radius: 100%;
+            }
+
+            .left-eye {
+                left: 40px;
+                transform: rotate(-70deg);
+            }
+
+            .right-eye {
+                right: 40px;
+                transform: rotate(70deg);
+            }
+
+            .mouth {
+                transform: rotate(-180deg);
+                bottom: 10px;
+            }
+        }
+    }
+
+    .copy {
+        text-decoration: none;
+        font-size: 12px;
+        color: black;
+        opacity: 0.6;
+        text-align: center;
+        margin: auto;
+        margin-top: 20px;
+        width: max-content;
+        display: block;
+    }
+}
