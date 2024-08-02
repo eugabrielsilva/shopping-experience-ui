@@ -181,7 +181,6 @@ section.experience {
             top: 0;
             border-radius: 50px;
             transition: 0.5s all;
-            border: 2px solid transparent;
         }
 
         .box {
@@ -206,10 +205,13 @@ section.experience {
         }
 
         .button {
+            display: flex;
+            gap: 5px;
+            align-items: center;
             padding: 15px 20px;
             border-radius: 50px;
             background-color: var(--accent-color);
-            color: white;
+            color: var(--bg-color);
             font-weight: 500;
             z-index: 1;
             transition: 0.5s all;
@@ -221,6 +223,15 @@ section.experience {
             bottom: 0;
             right: 0;
             cursor: pointer;
+
+            svg {
+                width: 16px;
+                height: 16px;
+
+                path {
+                    fill: var(--bg-color);
+                }
+            }
         }
     }
 
@@ -253,7 +264,7 @@ section.experience {
 
             &:before {
                 border-radius: 20px;
-                border-color: var(--accent-color);
+                border: 1px solid var(--accent-color);
             }
 
             .button {

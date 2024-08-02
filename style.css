@@ -164,7 +164,6 @@ section.experience .note-form:before {
   top: 0;
   border-radius: 50px;
   transition: 0.5s all;
-  border: 2px solid transparent;
 }
 section.experience .note-form .box {
   padding: 10px 20px;
@@ -192,10 +191,13 @@ section.experience .note-form .box::placeholder {
   color: black;
 }
 section.experience .note-form .button {
+  display: flex;
+  gap: 5px;
+  align-items: center;
   padding: 15px 20px;
   border-radius: 50px;
   background-color: var(--accent-color);
-  color: white;
+  color: var(--bg-color);
   font-weight: 500;
   z-index: 1;
   transition: 0.5s all;
@@ -209,6 +211,13 @@ section.experience .note-form .button {
   bottom: 0;
   right: 0;
   cursor: pointer;
+}
+section.experience .note-form .button svg {
+  width: 16px;
+  height: 16px;
+}
+section.experience .note-form .button svg path {
+  fill: var(--bg-color);
 }
 section.experience.form-open .face {
   margin-top: -80px;
@@ -236,7 +245,7 @@ section.experience.form-open .note-form .box::placeholder {
 }
 section.experience.form-open .note-form:before {
   border-radius: 20px;
-  border-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 section.experience.form-open .note-form .button {
   bottom: 10px;
